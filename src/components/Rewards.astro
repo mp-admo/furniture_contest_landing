@@ -1,0 +1,252 @@
+<section class="rewards">
+
+    <div class="container">
+
+        <div class="rewards__content">
+
+            <!-- section header -->
+            <div class="rewards__header">
+
+                <span class="rewards__subtitle">
+                    Yang Akan Anda Dapatkan
+                </span>
+
+                <h3 class="rewards__title">
+                    Hadiah & Penghargaan
+                </h3>
+
+            </div>
+
+            <!-- cards -->
+            <div class="rewards__grid">
+
+                <!-- card 01 -->
+                <article class="rewards__card">
+
+                    <span class="rewards__number">
+                        01
+                    </span>
+
+                    <h5 class="rewards__card-title">
+                        Hadiah Uang Tunai
+                    </h5>
+
+                    <p class="rewards__card-text">
+                        Bentuk apresiasi nyata untuk setiap usaha dan ide kreatif Anda.
+                    </p>
+
+                </article>
+
+                <!-- card 02 -->
+                <article class="rewards__card">
+
+                    <span class="rewards__number">
+                        02
+                    </span>
+
+                    <h5 class="rewards__card-title">
+                        Kontrak Produksi Eksklusif
+                    </h5>
+
+                    <p class="rewards__card-text">
+                        Melihat karya Anda berproses menjadi produk nyata. Didukung oleh jaringan manufaktur pilihan.
+                    </p>
+
+                </article>
+
+                <!-- card 03 -->
+                <article class="rewards__card">
+
+                    <span class="rewards__number">
+                        03
+                    </span>
+
+                    <h5 class="rewards__card-title">
+                        Sistem Royalti Berkelanjutan
+                    </h5>
+
+                    <p class="rewards__card-text">
+                        Dapatkan hasil dari setiap produk yang terjual. Karya Anda terus memiliki value.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style> 
+
+    .rewards {
+        background-color: #f2f1ee;
+        padding: 8rem 0;
+        overflow: hidden;
+    }
+
+    .rewards .container {
+        width: 100%;
+        max-width: 140rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    .rewards__header {
+        margin-bottom: 4.8rem;
+    }
+
+    .rewards__subtitle {
+        display: inline-flex;
+        align-items: center;
+        color: #111; 
+        font-size: 1.2rem; 
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        margin-bottom: 3.2rem;
+    }
+
+    .rewards__subtitle::before {
+        content: ""; 
+        display: inline-block;
+        width: 0.6rem; 
+        height: 0.6rem; 
+        background-color: #111;
+        border-radius: 50%; 
+        margin-right: 1rem; 
+    }
+
+     .rewards__title {
+        max-width: 56rem;
+        color: #111;
+        font-size: clamp(4.2rem, 5vw, 5.4rem);
+        font-weight: 300;
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+    }
+
+    .rewards__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 0.1rem solid rgba(90, 90, 90, 0.2);
+        border-bottom: 0.1rem solid rgba(90, 90, 90, 0.2);
+    }
+
+    .rewards__card {
+        display: flex;
+        flex-direction: column;
+        padding: 4.8rem 4rem;
+        border-left: 0.1rem solid rgba(90, 90, 90, 0.2);
+        position: relative;
+        background-color: transparent;
+        transition: background-color 0.4s ease;
+    }
+
+    .rewards__card:last-child {
+        border-right: 0.1rem solid rgba(90, 90, 90, 0.2);
+    }
+
+    .rewards__number {
+        color: #888888;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        margin-bottom: 4rem;
+        text-transform: uppercase;
+    }
+
+    .rewards__card-title {
+        color: #111;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        margin-bottom: 1.4rem;
+    }
+
+    .rewards__card-text {
+        color: #888888;
+        line-height: 1.6;   
+    }
+
+    .rewards__card::before {
+        content: "";
+        position: absolute;
+        top: -0.1rem;
+        left: 0;
+        width: 0;
+        height: 0.1rem;
+        background-color: #888;
+        transition: width 0.5s ease;
+    }
+
+    .rewards__card:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .rewards__card:hover::before {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+    
+    .rewards {
+        padding: 5rem 0; 
+    }
+
+    .rewards__header {
+        margin-bottom: 3.2rem;
+    }
+
+    .rewards__subtitle {
+        margin-bottom: 2rem;
+    }
+
+    .rewards__title {
+        font-size: 3.2rem;
+        max-width: 100%;
+    }
+
+    
+    .rewards__grid {
+        grid-template-columns: 1fr;
+        border-bottom: none; 
+    }
+
+    
+    .rewards__card {
+        padding: 4rem 2rem; 
+        border-right: 0.1rem solid rgba(90, 90, 90, 0.2);
+        border-bottom: 0.1rem solid rgba(90, 90, 90, 0.2); 
+    }
+
+    .rewards__card:hover {
+        background-color: transparent; 
+    }
+
+    .rewards__card:hover::before {
+        width: 0;
+    }
+
+    .rewards__card,
+    .rewards__card::before {
+        transition: none !important;
+    }
+
+    .rewards__number {
+        margin-bottom: 2.4rem; 
+    }
+
+    .rewards__card-title {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .rewards__card-text {
+        font-size: 1.4rem; 
+    }
+}
+
+</style>

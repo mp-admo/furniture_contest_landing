@@ -1,0 +1,128 @@
+---
+
+---
+
+<header class="header">
+
+    <nav class="header__nav">
+
+        <a href="https://woodara.online" target="_blank" class="header__logo">
+            
+            <img 
+                src="/logo_woodara.svg" 
+                alt="Woodara Logo"
+                class="header__logo-image"
+            >
+        
+        </a>
+  
+  
+        <a href="#tentang" class="header__pill">
+            
+            <img 
+                src="/flag_icon.png" 
+                alt="Indonesia Flag"
+                class="header__flag"
+            >
+            
+            <span class="header__text-desktop">
+                Furniture Design Contest 2026
+            </span>
+
+            <span class="header__text-mobile">
+                Furniture Design Contest
+            </span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+<style>
+    /* Шапка */
+    .header {
+        display: flex;
+        align-items: center; 
+        background-color: #f9f9f9;
+        height: 6.4rem;
+        width: 100%;
+        z-index: 100;
+        border-bottom: 0.1rem solid rgba(131, 131, 131, 0.1);
+        position: sticky;
+        top: 0;
+    }
+
+    .header__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 140rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+        height: 100%;  
+        width: 100%;
+    }
+
+    .header__logo-image {
+        height: 2rem;
+        width: auto;
+        display: block;
+    }
+
+    .header__pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;                  
+        background-color: #f9f9f9;
+        color: #888;
+        padding: 1rem 1.6rem;      
+        border-radius: 10rem;
+        border: 1px solid #bdbdbd;       
+        font-size: 1.2rem;          
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .header__flag {
+        width: 1.6rem;
+        height: 1.6rem;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .header__text-mobile {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+
+    .header__logo-image {
+        height: 1.3rem;
+    }
+
+    .header__pill {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    .header__flag {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+     .header__text-desktop {
+        display: none;
+    }
+
+    .header__text-mobile {
+        display: inline;
+    }
+
+    }
+   
+</style>

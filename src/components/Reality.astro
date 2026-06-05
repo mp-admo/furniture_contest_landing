@@ -1,0 +1,200 @@
+---
+
+---
+
+<section class="reality">
+
+    <div class="container">
+
+        <div class="reality__content">
+
+            <!-- left -->
+            <div class="reality__left">
+                
+                <span class="reality__subtitle">
+                    Realita Desainer Indonesia
+                </span>
+
+                <h3 class="reality__title">
+                    Berapa banyak desain bagus yang cuma tersimpan di laptop Anda?
+                </h3>
+
+            </div>
+
+            <!-- right -->
+            <div class="reality__right">
+
+                <p class="reality__text">
+                    Kami tahu realitanya. Di Indonesia, begitu banyak desainer muda berbakat, mahasiswa kreatif, dan perajin lokal yang memiliki visi luar biasa, namun terpaksa bekerja dalam keterbatasan. Tanpa koneksi, tanpa modal, dan tanpa fasilitas yang layak, ide-ide jenius Anda sering kali terkubur seiring berjalannya waktu.
+                </p>
+
+                <p class="reality__text">
+                    Sementara itu, di panggung internasional, karya-karya hebat dari desainer lokal sering kali dijual secara anonim — dianggap sekadar komoditas massal tanpa identitas asli pembuatnya.
+                </p>
+
+                <div class="reality__highlight">
+
+                    <p class="reality__highlight-text">
+                        Ini adalah sebuah potensi yang terabaikan. Tapi, cerita itu berakhir di sini.
+                    </p>
+
+                </div>
+
+                <p class="reality__text">
+                    Woodara Indonesian Design Contest hadir bukan sebagai kompetisi biasa. Ini adalah titik balik. Sebuah panggung besar yang sengaja kami bangun untuk Anda yang berani percaya pada kekuatan mimpi dan desain Anda sendiri.
+                </p>
+
+                <p class="reality__text">
+                    Kami tidak peduli seberapa kecil studio Anda. Kami mencari <span>JIWA</span> dan <span>TALENTA</span> nyata. Kami siap menyaring karya-karya terbaik, membawa <span>5 koleksi mebel pilihan</span> (Indoor & Outdoor) menuju pabrik-pabrik manufaktur terbaik, lalu mengekspor dan menjualnya ke <span>pasar global di seluruh dunia.</span>
+                </p>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<style> 
+
+    .reality {
+        overflow: hidden;
+        border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
+        background-color: #f9f9f9;
+    }
+
+    .reality .container {
+        width: 100%;
+        max-width: 140rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    .reality__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+        padding: 8rem 0;
+    }
+
+    .reality__left {
+        position: relative;
+    }
+
+    .reality__subtitle {
+        display: inline-flex;
+        align-items: center;
+        color: #111; 
+        font-size: 1.2rem; 
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        margin-bottom: 3.2rem;
+    }
+
+    .reality__subtitle::before {
+        content: ""; 
+        display: inline-block;
+        width: 0.6rem; 
+        height: 0.6rem; 
+        background-color: #111;
+        border-radius: 50%; 
+        margin-right: 1rem; 
+    }
+
+    .reality__title {
+        max-width: 48rem;
+        color: #111;
+        font-size: clamp(4.2rem, 5vw, 5.4rem);
+        font-weight: 300;
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+    }
+
+    .reality__right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reality__text {
+    color: #888888;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+    }
+
+    .reality__highlight {
+        position: relative;
+        padding: 2.8rem 0 2.8rem 2.8rem;
+        border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+        border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 1.8rem;
+    }
+
+    .reality__highlight::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 1.6rem;
+        width: 0.2rem;
+        height: calc(100% - 3.2rem);
+        background-color: #B8955D; /* мягкий luxury gold */
+    }
+
+    .reality__highlight-text {
+        color: #111;
+        font-size: 1.8rem;
+        font-weight: 500;
+        max-width: 40rem;
+    }
+
+    span {
+        color: #111
+    }
+
+    @media (max-width: 768px) {
+   
+    .reality__content {
+        grid-template-columns: 1fr;
+        row-gap: 4rem; 
+        padding: 5rem 0; 
+    }
+
+    
+    .reality__subtitle {
+        margin-bottom: 2rem; 
+    }
+
+    .reality__title {
+        max-width: 100%; 
+        font-size: 3rem; 
+        line-height: 1.2;
+    }
+
+    .reality__text {
+        font-size: 1.4rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .reality__highlight {
+        padding: 2rem 0 2rem 2rem; 
+    }
+
+    .reality__highlight::before {
+        top: 0;
+        height: 100%; 
+    }
+
+    .reality__highlight-text {
+        font-size: 1.6rem; 
+        max-width: 100%;
+    }
+}
+
+    
+
+
+
+
+
+</style>

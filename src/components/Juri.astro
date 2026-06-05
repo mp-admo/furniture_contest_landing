@@ -1,0 +1,275 @@
+---
+
+---
+
+<section class="jury">
+
+    <div class="container">
+
+
+        <!-- heading -->
+        <div class="jury__heading">
+
+            <span class="jury__subtitle">
+                Panel Juri
+            </span>
+
+            <h3 class="jury__title">
+
+                Dinilai oleh Para
+
+                <span class="jury__title-italic">
+                    Maestro Industri
+                </span>
+
+            </h3>
+
+        </div>
+
+
+        <!-- main block -->
+        <div class="jury__content">
+
+
+            <!-- left side -->
+            <div class="jury__info">
+
+                <p class="jury__text">
+                    Di babak final, panel juri eksklusif yang terdiri dari 
+                    
+                    <span>profesor desain ternama</span> 
+                    
+                    dan 
+                    
+                    <span>blogger serta influencer industri terkemuka</span> 
+                    
+                    akan turun tangan langsung untuk menguji, menilai, dan memilih koleksi terbaik yang layak diproduksi dan dipasarkan secara global.
+                </p>
+
+                <p class="jury__text">
+                    Tidak ada kompromi. Tidak ada pilih kasih. Hanya karya terbaik yang akan maju ke tahap produksi dan menembus pasar internasional.
+                </p>
+
+                <p class="jury__text">
+                    Syarat dan ketentuan lengkap kompetisi akan segera kami rilis. Pantau terus pembaruan kami.
+                </p>
+
+
+                <!-- tags -->
+                <div class="jury__tags">
+
+                    <span class="jury__tag">
+                        Profesor Desain
+                    </span>
+
+                    <span class="jury__tag">
+                        Influencer Industri
+                    </span>
+
+                    <span class="jury__tag">
+                        Pakar Manufaktur
+                    </span>
+
+                    <span class="jury__tag">
+                        Kurator Internasional
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- right side -->
+            <div class="jury__image-wrapper">
+
+                <img 
+                    src="/jury_image.png"
+                    alt="Hidden members of the competition jury"
+                    class="jury__image"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+    .jury {
+        background-color: #111;
+        padding: 8rem 0;
+    }
+
+    .jury .container {
+        width: 100%;
+        max-width: 140rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    .jury__heading {
+        max-width: 62rem;
+        margin-bottom: 6rem;
+    }
+
+    .jury__subtitle {
+        display: inline-flex;
+        align-items: center;
+        color: #888888; 
+        font-size: 1.2rem; 
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        margin-bottom: 3.2rem;
+    }
+
+    .jury__subtitle::before {
+        content: ""; 
+        display: inline-block;
+        width: 0.6rem; 
+        height: 0.6rem; 
+        background-color: #888888;
+        border-radius: 50%; 
+        margin-right: 1rem; 
+    }
+
+    .jury__title {
+         display: flex;
+        flex-direction: column;
+        color: #FFFFFF;
+        font-size: clamp(4.2rem, 5vw, 5.4rem);
+        font-weight: 300;
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+    }
+
+    .jury__title-italic {
+        font-style: italic;
+        font-weight: 300;
+        color: #888;
+    }
+
+    .jury__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+    }
+
+    .jury__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .jury__text {
+        color: #888888;
+        font-size: 1.6rem;
+        line-height: 1.7;
+        margin-bottom: 1.8rem;
+        max-width: 62rem;
+    }
+
+    .jury__text span {
+        color: #FFFFFF;
+    }
+
+    .jury__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        margin-top: 4rem;
+    }
+
+    .jury__tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.2rem 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #888888;
+        font-size: 1.2rem;
+        letter-spacing: 0.14rem;
+        text-transform: uppercase;
+        transition:
+            border-color 0.3s ease,
+            color 0.3s ease,
+            background-color 0.3s ease;
+    }
+
+    .jury__tag:hover {
+        border-color: rgba(255, 255, 255, 0.2);
+        color: #FFFFFF;
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .jury__image-wrapper {
+        position: relative;
+    }
+
+    .jury__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .jury {
+            padding: 5rem 0;
+        }
+
+        .jury__heading {
+            margin-bottom: 3.5rem;
+            max-width: 100%;
+        }
+
+        .jury__subtitle {
+            margin-bottom: 2rem;
+        }
+
+        .jury__title {
+            font-size: 3.2rem; 
+            line-height: 1.2;
+        }
+
+        .jury__content {
+            grid-template-columns: 1fr; /
+        }
+
+
+        .jury__text {
+            font-size: 1.4rem; /
+            line-height: 1.6;
+            margin-bottom: 1.8rem;
+            max-width: 100%;
+        }
+
+       
+        .jury__tags {
+            gap: 0.8rem; 
+            margin-top: 1.6rem;
+            margin-bottom: 3.4rem;
+        }
+
+        .jury__tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.4rem 1rem; 
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+            line-height: 1.3; 
+            width: 100%;
+        }
+
+        .jury__tag:hover {
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #888888;
+            background-color: transparent;
+        }
+    }
+
+</style>
