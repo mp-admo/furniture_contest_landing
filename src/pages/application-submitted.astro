@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+
+    <section class="success">
+
+        <div class="container">
+
+            <span class="success__subtitle">
+                Application Submitted
+            </span>
+
+            <h1 class="success__title">
+                Thank You For Your Submission
+            </h1>
+
+            <p class="success__text">
+                Your application has been successfully received.
+            </p>
+
+            <p class="success__text">
+                Our team will review your submission and contact you if additional information is required.
+            </p>
+
+        </div>
+
+    </section>
+
+</Layout>
+
+<style>
+
+    .success {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8rem 0;
+        background-color: #f2f1ee;
+    }
+
+    .success .container {
+        max-width: 80rem;
+        text-align: center;
+    }
+
+    .success__subtitle {
+        display: block;
+        color: #888;
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    .success__title {
+        color: #111;
+        font-size: clamp(4.2rem, 5vw, 5.4rem);
+        font-weight: 300;
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+        margin-bottom: 4rem;
+    }
+
+    .success__text {
+        color: #888;
+        font-size: 1.6rem;
+        line-height: 1.7;
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+
+        .success {
+            min-height: 60vh;
+            padding: 5rem 0;
+        }
+
+        .success__title {
+            font-size: 3.2rem;
+        }
+
+        .success__text {
+            font-size: 1.4rem;
+        }
+
+    }
+
+</style>
