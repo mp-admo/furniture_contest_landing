@@ -1,0 +1,65 @@
+---
+
+---
+
+<section class="application">
+
+    <div class="container">
+
+        <iframe
+            data-tally-src="https://tally.so/embed/vGdv5D?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="0"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Woodara Furniture Contest"
+        ></iframe>
+
+    </div>
+
+</section>
+
+<script is:inline>
+    const d = document;
+
+    const loadTally = () => {
+        if (typeof Tally !== "undefined") {
+            Tally.loadEmbeds();
+        } else {
+            d.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((el) => {
+                el.src = el.dataset.tallySrc;
+            });
+        }
+    };
+
+    if (typeof Tally !== "undefined") {
+        loadTally();
+    } else if (!d.querySelector('script[src="https://tally.so/widgets/embed.js"]')) {
+
+        const s = d.createElement("script");
+
+        s.src = "https://tally.so/widgets/embed.js";
+        s.onload = loadTally;
+        s.onerror = loadTally;
+
+        d.body.appendChild(s);
+    }
+</script>
+
+<style>
+
+    .application {
+        background-color: #f2f1ee;
+        padding: 6rem 0;
+    }
+
+    .application .container {
+        width: 100%;
+        max-width: 140rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+</style>
