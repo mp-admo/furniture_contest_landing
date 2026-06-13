@@ -6,7 +6,7 @@
 
     <nav class="header__nav">
 
-        <a href="https://woodara.online" target="_blank" class="header__logo">
+        <a href="/" class="header__logo">
             
             <img 
                 src="/logo_woodara.svg" 
@@ -15,6 +15,26 @@
             >
         
         </a>
+
+        <div class="header__menu">
+
+            <a href="/#requirements" class="header__menu-link">
+                Panduan
+            </a>
+
+            <a href="/terms" class="header__menu-link">
+                Ketentuan
+            </a>
+
+            <a href="/terms#materials" class="header__menu-link">
+                Material
+            </a>
+
+            <a href="/#application" class="header__menu-link">
+                Kirim Karya
+            </a>
+
+        </div>
   
   
         <a href="#tentang" class="header__pill">
@@ -64,6 +84,12 @@
         width: 100%;
     }
 
+   .header__menu {
+        display: flex;
+        gap: 4rem;
+        margin: 0 auto;
+    }
+
     .header__logo-image {
         height: 2rem;
         width: auto;
@@ -96,6 +122,19 @@
 
     .header__text-mobile {
         display: none;
+    }
+
+    .header__menu-link {
+        color: #888;
+        line-height: 1;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color .3s ease;
+    }
+
+    .header__menu-link:hover {
+        color: #111;
     }
 
     @media (max-width: 768px) {
