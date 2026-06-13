@@ -55,9 +55,70 @@
 
         </a>
 
+        <button class="burger-button" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
     </nav>
 
 </header>
+
+<!-- мобильное меню -->
+<div class="mobile-menu">
+
+    <div class="mobile-menu__pill">
+
+        <img
+            src="/flag_icon.png"
+            alt="Indonesia Flag"
+            class="mobile-menu__flag"
+        >
+
+        <span>
+            Furniture Design Contest 2026
+        </span>
+
+    </div>
+
+    <nav class="mobile-menu__nav">
+
+        <a href="/#requirements">
+            Panduan
+        </a>
+
+        <a href="/terms#terms">
+            Ketentuan
+        </a>
+
+        <a href="/terms#materials">
+            Material
+        </a>
+
+        <a href="/#application">
+            Kirim Karya
+        </a>
+
+    </nav>
+
+    <div class="mobile-menu__socials">
+
+        <a href="tel:+6281138315745">
+            +62 811 3831 5745
+        </a>
+
+        <a href="https://www.instagram.com/woodara.shop/" target="_blank">
+            @woodara.shoop
+        </a>
+
+        <a href="https://www.tiktok.com/@woodaraindonesia?_r=1" target="_blank">
+            @woodaraindonesia
+        </a>
+
+    </div>
+
+</div>
 
 <style>
     /* Шапка */
@@ -137,6 +198,96 @@
         color: #111;
     }
 
+    .burger-button {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 6.4rem;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 6.4rem);
+        background-color: #f9f9f9;
+        padding: 5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s ease;
+        z-index: 200;
+    }
+
+    .mobile-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-menu__pill {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        align-self: flex-start;
+        padding: 1rem 1.6rem;
+        border: 1px solid #bdbdbd;
+        border-radius: 10rem;
+        color: #888;
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+    }
+
+    .mobile-menu__flag {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .mobile-menu__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 10rem;
+    }
+
+    .mobile-menu__nav a {
+        color: #111;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    .mobile-menu__socials {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 10rem;
+    }
+
+    .mobile-menu__socials a {
+        color: #111;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    .mobile-menu__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-start;
+        padding: 1.8rem 3rem;
+        border-radius: 10rem;
+        background-color: #ff4b00;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.8rem;
+    }
+
     @media (max-width: 768px) {
 
         .header__menu {
@@ -166,6 +317,80 @@
             display: inline;
         }
 
+        .header__pill {
+            display: none;
+        }
+
+        .burger-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.4rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            width: 2.4rem;
+            height: 2.4rem;
+            padding: 0;
+        }
+
+        .burger-button span {
+            width: 100%;
+            height: 0.2rem;
+            background-color: #111;
+            transition: .3s ease;
+        }
+
+        .burger-button--active span:nth-child(1) {
+            transform: translateY(0.6rem) rotate(45deg);
+        }
+
+        .burger-button--active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-button--active span:nth-child(3) {
+            transform: translateY(-0.6rem) rotate(-45deg);
+        }
+
     }
    
 </style>
+
+
+<script>
+
+    const burgerBtn = document.querySelector('.burger-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuLinks = document.querySelectorAll('.mobile-menu__nav a');
+
+    if (burgerBtn && mobileMenu) {
+
+        burgerBtn.addEventListener('click', () => {
+
+            mobileMenu.classList.toggle('is-open');
+            burgerBtn.classList.toggle('burger-button--active');
+
+            if (mobileMenu.classList.contains('is-open')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+
+        });
+
+        menuLinks.forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                mobileMenu.classList.remove('is-open');
+                burgerBtn.classList.remove('burger-button--active');
+                document.body.style.overflow = '';
+
+            });
+
+        });
+
+    }
+
+</script>
