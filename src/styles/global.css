@@ -1,9 +1,17 @@
 @import "./fonts.css";
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; /* 1rem ровно 10px вместо 16px */
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem; /* 1rem ровно 10px вместо 16px */
+    scroll-padding-top: 6rem; 
+}
+
+@media (max-width: 768px) {
+
+    html {
+        scroll-padding-top: 2rem;
+    }
+
 }
 
 body {

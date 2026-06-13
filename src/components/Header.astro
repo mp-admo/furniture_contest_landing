@@ -326,19 +326,24 @@
             flex-direction: column;
             justify-content: center;
             gap: 0.4rem;
-            background: transparent;
-            border: none;
-            cursor: pointer;
             width: 2.4rem;
             height: 2.4rem;
             padding: 0;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            overflow: hidden;
         }
 
         .burger-button span {
-            width: 100%;
+            display: block;
+            width: 2rem;
             height: 0.2rem;
+            margin: 0 auto;
             background-color: #111;
-            transition: .3s ease;
+            transition:
+                transform .3s ease,
+                opacity .3s ease;
         }
 
         .burger-button--active span:nth-child(1) {
