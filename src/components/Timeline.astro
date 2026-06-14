@@ -91,11 +91,7 @@
                                 <p class="timeline__text">
                                     Peserta wajib mengajukan tiga produk furnitur:
                                     <br>
-                                    1. Armchair
-                                    <br>
-                                    2. Chair
-                                    <br>
-                                    3. Dining Table
+                                    1. Armchair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Chair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Dining Table
                                     <br><br>
                                     Dokumen yang harus disertakan:
                                     <br>
@@ -175,21 +171,13 @@
                                     <br><br>
                                     Indoor Furniture:
                                     <br>
-                                    1. Dresser
-                                    <br>
-                                    2. Coffee Table
-                                    <br>
-                                    3. Bedside Table
+                                    1. Dresser&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Coffee Table&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Bedside Table
                                     <br><br>
                                     Outdoor Furniture:
                                     <br>
-                                    4. Sun Lounger
+                                    4. Sun Lounger&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Garden Armchair
                                     <br>
-                                    5. Garden Armchair
-                                    <br>
-                                    6. Outdoor Chair
-                                    <br>
-                                    7. Small Outdoor Sofa
+                                    6. Outdoor Chair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7. Small Outdoor Sofa
                                 </p>
 
                             </div>
@@ -338,10 +326,10 @@
                     <img src="/timeline/timeline_image_08.jpg" alt="">
                 </div>
 
-                <div class="timeline__image">
+                <div class="timeline__image timeline__image--mobile-only">
                     <img src="/timeline/timeline_image_09.jpg" alt="">
                 </div>
-
+                
             </div>
 
         </div>
@@ -416,7 +404,7 @@
 
     .timeline__content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 58% 1fr;
         gap: 8rem;
         align-items: start;
     }
@@ -492,7 +480,7 @@
 
     .timeline__gallery {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 
@@ -506,6 +494,10 @@
         height: 100%;
         object-fit: cover;
         display: block;
+    }
+
+    .timeline__image--mobile-only {
+        display: none;
     }
     
 
@@ -577,6 +569,10 @@
             font-size: 1.4rem;
             line-height: 1.6;
             max-width: 100%;
+        }
+
+        .timeline__image--mobile-only {
+            display: block;
         }
     }
 
