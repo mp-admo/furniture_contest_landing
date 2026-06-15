@@ -9,19 +9,25 @@ import Layout from "../layouts/Layout.astro";
         <div class="container">
 
             <span class="success__subtitle">
-                Application Submitted
+                Pengajuan Berhasil Dikirim
             </span>
 
-            <h1 class="success__title">
-                Thank You For Your Submission
+            <h1 class="success__main-title">
+
+                Terima Kasih
+
+                <span class="success__main-title-italic">
+                    Atas Pengajuan Anda
+                </span>
+
             </h1>
 
             <p class="success__text">
-                Your application has been successfully received.
+                Pengajuan Anda telah berhasil kami terima.
             </p>
 
             <p class="success__text">
-                Our team will review your submission and contact you if additional information is required.
+                Tim kami akan meninjau pengajuan Anda dan menghubungi Anda apabila diperlukan informasi tambahan.
             </p>
 
         </div>
@@ -47,21 +53,41 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .success__subtitle {
-        display: block;
-        color: #888;
-        font-size: 1.2rem;
+        display: inline-flex;
+        align-items: center;
+        color: #111; 
+        font-size: 1.2rem; 
+        font-weight: 400;
         letter-spacing: 0.2rem;
         text-transform: uppercase;
-        margin-bottom: 2rem;
+        margin-bottom: 3.2rem;
     }
 
-    .success__title {
+    .success__subtitle::before {
+        content: ""; 
+        display: inline-block;
+        width: 0.6rem; 
+        height: 0.6rem; 
+        background-color: #111;
+        border-radius: 50%; 
+        margin-right: 1rem; 
+    }
+
+    .success__main-title {
+        display: flex;
+        flex-direction: column;
         color: #111;
         font-size: clamp(4.2rem, 5vw, 5.4rem);
+        max-width: 60rem;
         font-weight: 300;
         line-height: 1.12;
         letter-spacing: -0.04em;
-        margin-bottom: 4rem;
+        margin-bottom: 3.2rem;
+    }
+
+    .success__main-title-italic {
+        font-style: italic;
+        color: #888;
     }
 
     .success__text {
