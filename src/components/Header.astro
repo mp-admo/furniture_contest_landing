@@ -1,5 +1,12 @@
 ---
+const pathname = Astro.url.pathname;
 
+const isEnglish = pathname.startsWith('/en');
+
+const idPath = pathname.replace(/^\/en/, '') || '/';
+const enPath = pathname.startsWith('/en')
+    ? pathname
+    : `/en${pathname}`;
 ---
 
 <header class="header">
@@ -35,8 +42,29 @@
             </a>
 
         </div>
+
+        <!-- Язык -->
+        <div class="header__language">
+
+            <a
+                href={idPath}
+                class={`header__language-link ${!isEnglish ? 'is-active' : ''}`}
+            >
+                ID
+            </a>
+
+            <span>/</span>
+
+            <a
+                href={enPath}
+                class={`header__language-link ${isEnglish ? 'is-active' : ''}`}
+            >
+                EN
+            </a>
+
+        </div>
   
-  
+
         <a href="#tentang" class="header__pill">
             
             <img 
@@ -149,6 +177,32 @@
         display: flex;
         gap: 4rem;
         margin: 0 auto;
+    }
+
+    .header__language {
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+        margin-right: 3rem;
+    }
+
+    .header__language span {
+        color: #888;
+    }
+
+    .header__language-link {
+        font-weight: 500;
+        color: #888;
+        text-decoration: none;
+        transition: color .3s ease;
+    }
+
+    .header__language-link:hover {
+        color: #111;
+    }
+
+    .header__language-link.is-active {
+        color: #111;
     }
 
     .header__logo-image {
