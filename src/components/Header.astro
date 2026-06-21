@@ -7,6 +7,9 @@ const idPath = pathname.replace(/^\/en/, '') || '/';
 const enPath = pathname.startsWith('/en')
     ? pathname
     : `/en${pathname}`;
+
+const homeLink = isEnglish ? '/en/' : '/';
+const termsLink = isEnglish ? '/en/terms' : '/terms';
 ---
 
 <header class="header">
@@ -25,20 +28,20 @@ const enPath = pathname.startsWith('/en')
 
         <div class="header__menu">
 
-            <a href="/#requirements" class="header__menu-link">
-                Panduan
+            <a href={`${homeLink}#requirements`} class="header__menu-link">
+                {isEnglish ? 'Guide' : 'Panduan'}
             </a>
 
-            <a href="/terms" class="header__menu-link">
-                Ketentuan
+            <a href={termsLink} class="header__menu-link">
+                {isEnglish ? 'Terms' : 'Ketentuan'}
             </a>
 
-            <a href="/terms#materials" class="header__menu-link">
-                Material
+            <a href={`${termsLink}#materials`} class="header__menu-link">
+                {isEnglish ? 'Materials' : 'Material'}
             </a>
 
-            <a href="/#application" class="header__menu-link">
-                Kirim Karya
+            <a href={`${homeLink}#application`} class="header__menu-link">
+                {isEnglish ? 'Submit Entry' : 'Kirim Karya'}
             </a>
 
         </div>
@@ -112,21 +115,21 @@ const enPath = pathname.startsWith('/en')
 
     <nav class="mobile-menu__nav">
 
-        <a href="/#requirements">
-            Panduan
-        </a>
+            <a href={`${homeLink}#requirements`} class="header__menu-link">
+                {isEnglish ? 'Guide' : 'Panduan'}
+            </a>
 
-        <a href="/terms#terms">
-            Ketentuan
-        </a>
+            <a href={termsLink} class="header__menu-link">
+                {isEnglish ? 'Terms' : 'Ketentuan'}
+            </a>
 
-        <a href="/terms#materials">
-            Material
-        </a>
+            <a href={`${termsLink}#materials`} class="header__menu-link">
+                {isEnglish ? 'Materials' : 'Material'}
+            </a>
 
-        <a href="/#application">
-            Kirim Karya
-        </a>
+            <a href={`${homeLink}#application`} class="header__menu-link">
+                {isEnglish ? 'Submit Entry' : 'Kirim Karya'}
+            </a>
 
     </nav>
 
@@ -176,7 +179,8 @@ const enPath = pathname.startsWith('/en')
    .header__menu {
         display: flex;
         gap: 4rem;
-        margin: 0 auto;
+        flex: 1;
+        justify-content: center;
     }
 
     .header__language {
@@ -330,12 +334,23 @@ const enPath = pathname.startsWith('/en')
     }
 
     .header__language {
-        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: .6rem;
         margin-right: 3rem;
     }
 
 
     @media (max-width: 768px) {
+
+        .header__nav {
+            justify-content: flex-start;
+        }
+
+        .header__language {
+            margin-left: auto;
+            margin-right: 2.4rem;
+        }
 
         .header__menu {
             display: none;
