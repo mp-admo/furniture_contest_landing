@@ -1,5 +1,10 @@
 ---
+const pathname = Astro.url.pathname;
 
+const isEnglish = pathname.startsWith('/en');
+
+const homeLink = isEnglish ? '/en/' : '/';
+const termsLink = isEnglish ? '/en/terms' : '/terms';
 ---
 
 <footer class="footer">
@@ -15,7 +20,7 @@
                 <!-- logo -->
                 <div class="footer__brand">
 
-                    <a href="/" class="footer__logo-link">
+                    <a href={homeLink} class="footer__logo-link">
 
                         <img 
                             src="/logo_footer_woodara.svg"
@@ -75,20 +80,20 @@
                 <!-- navigation -->
                 <nav class="footer__nav">
 
-                    <a href="/#requirements" class="footer__nav-link">
-                        Panduan
+                    <a href={`${homeLink}#requirements`} class="footer__nav-link">
+                        {isEnglish ? 'Guide' : 'Panduan'}
                     </a>
 
-                    <a href="/terms" class="footer__nav-link">
-                        Ketentuan
+                    <a href={termsLink} class="footer__nav-link">
+                        {isEnglish ? 'Terms' : 'Ketentuan'}
                     </a>
 
-                    <a href="/terms#materials" class="footer__nav-link">
-                        Material
+                    <a href={`${termsLink}#materials`} class="footer__nav-link">
+                        {isEnglish ? 'Materials' : 'Material'}
                     </a>
 
-                    <a href="/#application" class="footer__nav-link">
-                        Kirim Karya
+                    <a href={`${homeLink}#application`} class="footer__nav-link">
+                        {isEnglish ? 'Submit Entry' : 'Kirim Karya'}
                     </a>
 
                 </nav>
