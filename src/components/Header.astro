@@ -10,6 +10,7 @@ const enPath = pathname.startsWith('/en')
 
 const homeLink = isEnglish ? '/en/' : '/';
 const termsLink = isEnglish ? '/en/terms' : '/terms';
+const finalistsLink = isEnglish ? '/en/finalists' : '/finalists';
 ---
 
 <header class="header">
@@ -44,7 +45,7 @@ const termsLink = isEnglish ? '/en/terms' : '/terms';
                 {isEnglish ? 'Submit Entry' : 'Kirim Karya'}
             </a>
 
-            <a href={`${homeLink}#selected`} class="header__menu-link">
+            <a href={finalistsLink} class="header__menu-link">
                 {isEnglish ? 'Selected' : 'Lolos Seleksi'}
             </a>
 
@@ -135,7 +136,7 @@ const termsLink = isEnglish ? '/en/terms' : '/terms';
                 {isEnglish ? 'Submit Entry' : 'Kirim Karya'}
             </a>
 
-            <a href={`${homeLink}#selected`} class="header__menu-link">
+            <a href={`${finalistsLink}#finalists`} class="header__menu-link">
                 {isEnglish ? 'Selected' : 'Lolos Seleksi'}
             </a>
 
